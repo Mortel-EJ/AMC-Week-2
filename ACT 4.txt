@@ -1,0 +1,48 @@
+import React, {useState} from 'react';
+import {Text, StyleSheet} from 'react-native';
+import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+
+const TextInANest = () => {
+  const [titleText, setTitleText] = useState("Mortel, EJ G.");
+  const bodyText = 'I led my group in developing of our Barangay Document Issuance System for our Sysarch1 and Sysarch2, We\'ve encountered a lot of problems specially on the coding side. Since only some of us can code, and our knowledge about coding is only like on surface level. So we did a lot of hard time working on our system specially on Sysarch2. \n\n We still manage to work in by maximazing the Artificial Intellegence by giving it the best prompt for the system we want, aswell as using or surface level knowledge to kind of know what it takes to build our system. I\'m happy on what we accomplished, but we knew it could have been much better. But it\'s something to look forward for, is to be better than who we are, what we did before. It\'s such a great feeling creating system from scratch, from completely different environment, from different programming language. It\'s been a tough ride for us as a group but we did manage to work on it. So I\'m happy for my group, and I\'m thankful and grateful to them, and for what they have done.';
+
+  const onPressTitle = () => {
+    setTitleText("Sysarch Journey");
+  };
+
+  return (
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.baseText}>
+          <Text style={styles.titleText} onPress={onPressTitle}>
+            {titleText}
+            {'\n'}
+            {'\n'}
+          </Text>
+          <Text numberOfLines={100}>{bodyText}</Text>
+        </Text>
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  baseText: {
+    fontFamily: 'Cochin',
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  boldText: {
+    fontWeight: 'bold',
+  },
+  redText: {
+    color: 'red',
+  },
+});
+
+export default TextInANest;

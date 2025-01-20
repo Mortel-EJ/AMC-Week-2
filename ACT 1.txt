@@ -1,0 +1,31 @@
+import React from 'react';
+import {View, Text, Image, ScrollView, TextInput} from 'react-native';
+
+const App = () => {
+  return (
+    <ScrollView>
+      <Text style = {{textAlign: 'center'}}>I love Son Chaeyoung</Text>
+      <View>
+        <Text style = {{textAlign: 'center'}}>My Honeybunch Sugarplum</Text>
+        <Image
+          source={{
+            uri: 'https://th.bing.com/th/id/OIP.GF1fRplHIYBmO-U7qjsX-gHaLH?w=201&h=302&c=7&r=0&o=5&pid=1.7',
+          }}
+          style={{alignSelf: 'center', width: 200, height: 200,}}
+        />
+      </View>
+      <TextInput
+        style={{
+          height: 40,
+          width: 300,
+          borderColor: 'gray',
+          borderWidth: 1,
+          alignItems: 'center'
+        }}
+        defaultValue="What is your message to Son Chaeyoung"
+      />
+    </ScrollView>
+  );
+};
+
+export default App;
